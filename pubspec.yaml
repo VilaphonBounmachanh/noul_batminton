@@ -16,6 +16,20 @@ dev_dependencies:
   flutter_test: 
     sdk: flutter
 
-flutter: 
+flutter:
+  generate: true
   uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/iconSvg/
+    - assets/icons/iconPng/
+  fonts:
+    - family: NotoSansLao
+      fonts:
+        - asset: assets/fonts/NotoSansLaoBold.ttf
+        - asset: assets/fonts/NotoSansLaoRegular.ttf
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/RobotoBold.ttf
+        - asset: assets/fonts/RobotoRegular.ttf
 
