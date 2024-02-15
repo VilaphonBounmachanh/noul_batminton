@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:noul_batmainton/app/services/constants/app_image.dart';
 import 'package:pinput/pinput.dart';
 
 class OtpPage extends StatelessWidget {
@@ -27,11 +28,14 @@ class OtpPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CircleAvatar(
-                radius: .25 * widthMediaQuery,
-                backgroundColor: const Color(0xFF00A950),
-                backgroundImage: const AssetImage(
-                  "assets/images/logo_jong.png",
+              Container(
+                height: 200,
+                width: 200,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(AppImages.loginOtp),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               const SizedBox(height: 22),
@@ -111,7 +115,7 @@ class OtpPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 34),
-              InkWell(
+              GestureDetector(
                 onTap: () {},
                 child: Container(
                   width: double.infinity,

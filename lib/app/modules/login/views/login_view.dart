@@ -8,8 +8,8 @@ import 'package:noul_batmainton/app/modules/login/widgets/email_phone_text_field
 import 'package:noul_batmainton/app/modules/login/widgets/login_button.dart';
 import 'package:noul_batmainton/app/modules/login/widgets/password_text_filed.dart';
 import 'package:noul_batmainton/app/modules/login/widgets/reuse_circular_avartar.dart';
-import 'package:noul_batmainton/constants/app_color.dart';
-import 'package:noul_batmainton/constants/logo_for_login.dart';
+import 'package:noul_batmainton/app/services/constants/app_color.dart';
+import 'package:noul_batmainton/app/services/constants/logo_for_login.dart';
 
 import '../controllers/login_controller.dart';
 

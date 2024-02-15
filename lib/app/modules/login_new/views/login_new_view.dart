@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 import 'package:noul_batmainton/app/modules/login_new/views/otp_page.dart';
+import 'package:noul_batmainton/app/services/constants/app_image.dart';
+import 'package:noul_batmainton/app/services/helpers/dialog.dart';
 
 import '../controllers/login_new_controller.dart';
 
@@ -10,23 +13,27 @@ class LoginNewView extends GetView<LoginNewController> {
   const LoginNewView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final widthMediaQuery = MediaQuery.of(context).size.width;
-    final heightMediaQuery = MediaQuery.of(context).size.height;
+    final size = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 35),
+            padding: const EdgeInsets.symmetric(
+              vertical: 25,
+              horizontal: 35,
+            ),
             child: Column(
-              // mainAxisAlignment: MainAxisAlignment.start,
-              // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(height: 8),
-                CircleAvatar(
-                  radius: .25 * widthMediaQuery,
-                  backgroundColor: const Color(0xFF00A950),
-                  backgroundImage: const AssetImage(
-                    "assets/images/logo_jong.png",
+                Container(
+                  height: .33 * size,
+                  width: .33 * size,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(AppImages.loginOtp),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -132,6 +139,30 @@ class LoginNewView extends GetView<LoginNewController> {
                     ),
                   ),
                 ),
+                // ElevatedButton(
+                //   onPressed: () {
+                //     CustomDialog.rejectDialog(); // Show the save dialog
+                //   },
+                //   child: const Text('Show reject Dialog'),
+                // ),
+                // ElevatedButton(
+                //   onPressed: () {
+                //     CustomDialog.saveDialog(); // Show the cancel dialog
+                //   },
+                //   child: const Text('Show Save Dialog'),
+                // ),
+                // ElevatedButton(
+                //   onPressed: () {
+                //     CustomDialog.rejectSuccess(); // Show the cancel dialog
+                //   },
+                //   child: const Text('reject success Dialog'),
+                // ),
+                // ElevatedButton(
+                //   onPressed: () {
+                //     CustomDialog.saveSuccess(); // Show the cancel dialog
+                //   },
+                //   child: const Text('save success Dialog'),
+                // ),
               ],
             ),
           ),
