@@ -42,10 +42,26 @@ class CustomDialog {
                           color: Colors.black,
                         ),
                       ),
-                      const Text(
-                        "ເອກະສານ ສະບັບນີ້ ຈະຖືກສົ່ງກັບ ໄປຍັງຕົ້ນທາງ",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 16),
+                      // const Text(
+                      //   "ເອກະສານສະບັບນີ້ ຈະຖືກສົ່ງກັບ ໄປຍັງຕົ້ນທາງ",
+                      //   textAlign: TextAlign.center,
+                      //   style: TextStyle(fontSize: 16),
+                      // ),
+                      RichText(
+                        text: const TextSpan(
+                          text: 'ເອກະສານສະບັບນີ້ຈະ ',
+                          style: TextStyle(color: Colors.black),
+                          children: [
+                            TextSpan(
+                              text: 'ຖືກສົ່ງກັບ ',
+                              style: TextStyle(color: Colors.red),
+                            ),
+                            TextSpan(
+                              text: 'ໄປຍັງຕົ້ນທາງ',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ],
+                        ),
                       ),
                       const SizedBox(height: 15),
                       //Buttons

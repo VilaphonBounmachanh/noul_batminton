@@ -139,12 +139,12 @@ class LoginNewView extends GetView<LoginNewController> {
                     ),
                   ),
                 ),
-                // ElevatedButton(
-                //   onPressed: () {
-                //     CustomDialog.rejectDialog(); // Show the save dialog
-                //   },
-                //   child: const Text('Show reject Dialog'),
-                // ),
+                ElevatedButton(
+                  onPressed: () {
+                    CustomDialog.rejectDialog(); // Show the save dialog
+                  },
+                  child: const Text('Show reject Dialog'),
+                ),
                 // ElevatedButton(
                 //   onPressed: () {
                 //     CustomDialog.saveDialog(); // Show the cancel dialog
