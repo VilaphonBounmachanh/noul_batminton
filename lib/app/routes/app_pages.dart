@@ -4,8 +4,8 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
-import '../modules/login_new/bindings/login_new_binding.dart';
-import '../modules/login_new/views/login_new_view.dart';
+import '../modules/login_with_phone/bindings/login_with_phone_binding.dart';
+import '../modules/login_with_phone/views/login_with_phone_view.dart';
 import '../modules/register/bindings/register_binding.dart';
 import '../modules/register/views/register_view.dart';
 
@@ -14,7 +14,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGIN_NEW;
+  static const INITIAL = Routes.LOGIN_WITH_PHONE;
 
   static final routes = [
     GetPage(
@@ -26,13 +26,6 @@ class AppPages {
       name: _Paths.LOGIN,
       page: () => LoginView(),
       binding: LoginBinding(),
-      children: [
-        GetPage(
-          name: _Paths.LOGIN,
-          page: () => LoginView(),
-          binding: LoginBinding(),
-        ),
-      ],
     ),
     GetPage(
       name: _Paths.REGISTER,
@@ -40,9 +33,9 @@ class AppPages {
       binding: RegisterBinding(),
     ),
     GetPage(
-      name: _Paths.LOGIN_NEW,
-      page: () => const LoginNewView(),
-      binding: LoginNewBinding(),
+      name: _Paths.LOGIN_WITH_PHONE,
+      page: () => const LoginWithPhoneView(),
+      binding: LoginWithPhoneBinding(),
     ),
   ];
 }
